@@ -99,7 +99,7 @@ def reflection_loop(task, max_iter = 3):
         print("Critique:", critique)
         critique_json = json.loads(critique)
 
-        if critique_json['is_correct'] == "Yes" and int(critique_json["confidence"]) >= 0.9:
+        if critique_json['is_correct'] == "Yes" and float(critique_json["confidence"]) >= 0.9:
             print("\nAnswer accepted with high confidence of ", critique_json["confidence"])
             return answer, mistake_memory
         else:
