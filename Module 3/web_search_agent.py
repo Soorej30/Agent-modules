@@ -6,7 +6,7 @@ import re
 
 with open('/Users/soorejsnair/Documents/code/Personal Projects/Secret/groq_key.txt', 'r') as key_file:
     GROQ_API_KEY = key_file.read()
-
+   
 def call_llm(messages):
     client = Groq(api_key=GROQ_API_KEY)
     response = client.chat.completions.create(
